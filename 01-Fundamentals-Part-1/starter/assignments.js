@@ -164,3 +164,18 @@ if ((dolphins_average_score > koalas_average_score) && (dolphins_average_score >
 }
 
 
+// ==================================================
+console.log("Coding challenge 3: ");
+
+const bill_1 = 275, bill_2 = 40, bill_3 = 430;
+
+const tip_1 = bill_1 * (bill_1 >= 50 && bill_1 <= 300 ? 0.15 : 0.20);
+const tip_2 = bill_2 * (bill_2 >= 50 && bill_2 <= 300 ? 0.15 : 0.20);
+const tip_3 = bill_3 * (bill_3 >= 50 && bill_3 <= 300 ? 0.15 : 0.20);
+
+console.log(`The first bill was ${bill_1}, the tip was ${tip_1}, and the total value ${bill_1 + tip_1}`);
+console.log(`The second bill was ${bill_2}, the tip was ${tip_2}, and the total value ${bill_2 + tip_2}`);
+console.log(`The third bill was ${bill_3}, the tip was ${tip_3}, and the total value ${bill_3 + tip_3}`);
+
+
+
