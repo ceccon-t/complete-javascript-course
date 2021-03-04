@@ -1,5 +1,6 @@
 
 // Coding challenge 1
+console.log("=========================");
 console.log('Coding challenge 1');
 
 const calcAverage = (a, b, c) => (a + b + c) / 3;
@@ -14,7 +15,6 @@ const checkWinner = (avgDolphins, avgKoalas) => {
     } else {
         console.log('No one wins');
     }
-    
 }
 
 let dolphinsScore1, dolphinsScore2, dolphinsScore3, dolphinsAverage;
@@ -32,7 +32,6 @@ dolphinsAverage = calcAverage(dolphinsScore1, dolphinsScore2, dolphinsScore3);
 koalasAverage = calcAverage(koalasScore1, koalasScore2, koalasScore3);
 
 checkWinner(dolphinsAverage, koalasAverage);
-
 
 console.log('With test data 2');
 dolphinsScore1 = 85;
