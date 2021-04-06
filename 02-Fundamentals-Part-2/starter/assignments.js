@@ -75,4 +75,12 @@ const tipsMap = bills.map(bill => calcTip(bill));
 console.log("Tips: ", tips);
 console.log("Tips with map: ", tipsMap);
 
+// BONUS
+const total = [bills[0]+calcTip(bills[0]), bills[1]+calcTip(bills[1]), bills[2]+calcTip(bills[2])];
+
+const totalsMap = bills.map(bill => bill+calcTip(bill));
+
+console.log("Totals: ", total);
+console.log("Totals with map: ", totalsMap);
+
 console.log("=========================");
