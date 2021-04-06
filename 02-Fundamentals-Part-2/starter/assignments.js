@@ -47,3 +47,32 @@ koalasAverage = calcAverage(koalasScore1, koalasScore2, koalasScore3);
 checkWinner(dolphinsAverage, koalasAverage);
 
 console.log("=========================");
+
+// ==========================================
+// Coding challenge 2
+console.log("=========================");
+console.log('Coding challenge 2');
+
+const calcTip = (bill) => {
+    let percentage;
+
+    if (bill >= 50 && bill <= 300) {
+        percentage = 0.15;
+    } else {
+        percentage = 0.2;
+    }
+
+    return bill * percentage;
+}
+
+const bills = [125, 555, 44];
+
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+// Just for fun
+const tipsMap = bills.map(bill => calcTip(bill));
+
+console.log("Tips: ", tips);
+console.log("Tips with map: ", tipsMap);
+
+console.log("=========================");
