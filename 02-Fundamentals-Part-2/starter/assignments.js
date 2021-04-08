@@ -91,8 +91,7 @@ console.log("=========================");
 console.log('Coding challenge 3');
 
 const mark = {
-    firstName: 'Mark',
-    lastName: 'Miller',
+    fullName: 'Mark Miller',
     mass: 78,
     height:  1.69,
 
@@ -103,8 +102,7 @@ const mark = {
 };
 
 const john = {
-    firstName: 'John',
-    lastName: 'Smith',
+    fullName: 'John Smith',
     mass: 92,
     height: 1.95,
 
@@ -117,6 +115,6 @@ const john = {
 const highestBMI = mark.calcBMI() > john.calcBMI() ? mark : john;
 const lowestBMI = john.calcBMI() < mark.calcBMI() ? john : mark;
 
-console.log(`${highestBMI.firstName}'s BMI (${highestBMI.calcBMI()}) is higher than ${lowestBMI.firstName}'s (${lowestBMI.calcBMI()})!`);
+console.log(`${highestBMI.fullName}'s BMI (${highestBMI.calcBMI()}) is higher than ${lowestBMI.fullName}'s (${lowestBMI.calcBMI()})!`);
 
 console.log("=========================");
