@@ -84,3 +84,39 @@ console.log("Totals: ", total);
 console.log("Totals with map: ", totalsMap);
 
 console.log("=========================");
+
+// ==========================================
+// Coding challenge 3
+console.log("=========================");
+console.log('Coding challenge 3');
+
+const mark = {
+    firstName: 'Mark',
+    lastName: 'Miller',
+    mass: 78,
+    height:  1.69,
+
+    calcBMI: function() {
+        if (this.bmi === undefined) this.bmi = this.mass / this.height**2;
+        return this.bmi;
+    }
+};
+
+const john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    mass: 92,
+    height: 1.95,
+
+    calcBMI: function() {
+        if (this.bmi === undefined) this.bmi = this.mass / this.height**2;
+        return this.bmi;
+    }
+}
+
+const highestBMI = mark.calcBMI() > john.calcBMI() ? mark : john;
+const lowestBMI = john.calcBMI() < mark.calcBMI() ? john : mark;
+
+console.log(`${highestBMI.firstName}'s BMI (${highestBMI.calcBMI()}) is higher than ${lowestBMI.firstName}'s (${lowestBMI.calcBMI()})!`);
+
+console.log("=========================");
