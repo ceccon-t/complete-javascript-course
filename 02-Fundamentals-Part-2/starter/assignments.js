@@ -137,5 +137,11 @@ console.log("Bills: ", billsCH4);
 console.log("Tips: ", tipsCH4);
 console.log("Totals: ", totalsCH4);
 
-const calcAverageArr = (arr) => arr.reduce((a,b) => a+b) / arr.length;
+const calcAverageArr = (arr) => {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum/arr.length;
+};
 console.log(calcAverageArr(totalsCH4));
