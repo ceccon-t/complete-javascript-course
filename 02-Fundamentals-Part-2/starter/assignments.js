@@ -118,3 +118,24 @@ const lowestBMI = john.calcBMI() < mark.calcBMI() ? john : mark;
 console.log(`${highestBMI.fullName}'s BMI (${highestBMI.calcBMI()}) is higher than ${lowestBMI.fullName}'s (${lowestBMI.calcBMI()})!`);
 
 console.log("=========================");
+
+// ==========================================
+// Coding challenge 4
+console.log("=========================");
+console.log('Coding challenge 4');
+
+const billsCH4 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tipsCH4 = [];
+const totalsCH4 = [];
+
+for (let i = 0; i < billsCH4.length; i++) {
+    tipsCH4.push(calcTip(billsCH4[i]));
+    totalsCH4.push(billsCH4[i] + tipsCH4[i]);
+}
+
+console.log("Bills: ", billsCH4);
+console.log("Tips: ", tipsCH4);
+console.log("Totals: ", totalsCH4);
+
+const calcAverageArr = (arr) => arr.reduce((a,b) => a+b) / arr.length;
+console.log(calcAverageArr(billsCH4));
