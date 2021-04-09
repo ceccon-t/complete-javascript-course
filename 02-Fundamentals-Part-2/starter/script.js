@@ -211,6 +211,7 @@ console.log(jonas);
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
 */
 
+/*
 const jonas =  {
     firstName: 'Jonas',
     lastName: 'Schmedtmann',
@@ -242,4 +243,9 @@ console.log(jonas['calcAge'](1991));
 // "Jonas is a 46-year old teacher, and he has a driver's license"
 console.log(jonas.getSummary());
 
+*/
+
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+}
 
