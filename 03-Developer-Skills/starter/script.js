@@ -10,7 +10,6 @@ const calcAge = birthYear => 2037 - birthYear;
 // VSCode user snippets folder on Linux: // home/<user>/.config/Code/User/snippets
 
 console.log(calcAge(1991));
-*/
 
 const measureKelvin = function () {
   const measurement = {
@@ -31,3 +30,4 @@ const measureKelvin = function () {
 
 // A) Identify bug
 console.log(measureKelvin());
+*/
