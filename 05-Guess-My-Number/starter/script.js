@@ -21,6 +21,8 @@ console.log(`Secret number is ${secretNumber}`);
 let score = 20;
 document.querySelector('.score').textContent = score;
 
+let highscore = 0;
+
 /* Implementation of coding challenge #1 */
 // let secretNumber;
 // let score;
@@ -61,6 +63,11 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').textContent = secretNumber;
     document.querySelector('.number').style.width = '30rem';
+
+    if (score > highscore) {
+      highscore = score;
+      document.querySelector('.highscore').textContent = highscore;
+    }
 
     // When guess is too high
   } else if (guess > secretNumber) {
