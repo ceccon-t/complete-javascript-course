@@ -83,6 +83,26 @@ const calcDisplayBalance = function(movements) {
 }
 calcDisplayBalance(account1.movements);
 
+const calcDisplaySummary = function(movements) {
+  const incomes = movements
+    .filter(mov => mov > 0)
+    .reduce((acc, mov) => acc + mov, 0 );
+  labelSumIn.textContent = `${incomes} EUR`;
+
+  const out = movements
+    .filter(mov => mov < 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumOut.textContent = `${Math.abs(out)} EUR`;
+
+  const interest = movements
+    .filter(mov => mov > 0)
+    .map(deposit => deposit * 1.2/100)
+    .filter((int) => int >= 1)
+    .reduce((acc, int) => acc + int, 0);
+  labelSumInterest.textContent = `${interest} EUR`;
+}
+calcDisplaySummary(account1.movements);
+
 const createUsernames = function(accounts) {
   accounts.forEach(function(acc) {
     acc.username = acc.owner.toLowerCase().split(' ').map(name => name[0]).join('');
@@ -243,7 +263,7 @@ const withdrawals = movements.filter(mov => mov < 0);
 console.log(withdrawals);
 */
 
-
+/*
 // THE REDUCE METHOD
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 console.log(movements);
@@ -262,3 +282,15 @@ console.log(max);
 
 // If initial value for acc is not informed, defaults to using first element of array
 console.log([-15, -40, -30].reduce((acc, cur) => (cur > acc) ? cur : acc));
+*/
+
+// Chaining array methods
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const eurToUsd = 1.1;
+const totalDepositsUSD = movements
+  .filter(mov => mov > 0)
+  .map((mov, i, arr) => { console.log(arr); return mov * eurToUsd})
+  // .map(mov => mov * eurToUsd)
+  .reduce((acc, mov) => acc+mov, 0);
+console.log(totalDepositsUSD);
+
