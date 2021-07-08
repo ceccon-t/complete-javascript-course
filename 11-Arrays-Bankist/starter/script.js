@@ -194,6 +194,7 @@ const movementsDescriptions = movements.map((mov, i) => {
 console.log(movementsDescriptions);
 */
 
+/*
 const createUsernames = function(accounts) {
   accounts.forEach(function(acc) {
     acc.username = acc.owner.toLowerCase().split(' ').map(name => name[0]).join('');
@@ -203,4 +204,25 @@ const createUsernames = function(accounts) {
 const user = 'Steven Thomas Williams';
 createUsernames(accounts)
 console.log(accounts);
+*/
 
+
+// THE FILTER METHOD
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+console.log(movements);
+
+const deposits = movements.filter(mov => mov > 0);
+
+console.log(deposits);
+
+const depositsWithFor = [];
+for (const mov of movements) {
+  if (mov > 0) {
+    depositsWithFor.push(mov);
+  }
+}
+console.log(depositsWithFor);
+
+
+const withdrawals = movements.filter(mov => mov < 0);
+console.log(withdrawals);
