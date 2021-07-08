@@ -284,6 +284,7 @@ console.log(max);
 console.log([-15, -40, -30].reduce((acc, cur) => (cur > acc) ? cur : acc));
 */
 
+/*
 // Chaining array methods
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const eurToUsd = 1.1;
@@ -293,4 +294,18 @@ const totalDepositsUSD = movements
   // .map(mov => mov * eurToUsd)
   .reduce((acc, mov) => acc+mov, 0);
 console.log(totalDepositsUSD);
+*/
 
+
+// THE FIND METHOD
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const firstWithdrawal = movements.find(mov => mov < 0);
+
+console.log(movements);
+console.log(firstWithdrawal);
+
+console.log(accounts);
+
+const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+console.log(account);
