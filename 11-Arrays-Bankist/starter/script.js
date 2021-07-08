@@ -77,6 +77,21 @@ const displayMovements = function(movements) {
 
 displayMovements(account1.movements);
 
+const calcDisplayBalance = function(movements) {
+  const balance = movements.reduce((acc, mov) => acc+mov, 0);
+  labelBalance.textContent = `${balance} EUR`;
+}
+calcDisplayBalance(account1.movements);
+
+const createUsernames = function(accounts) {
+  accounts.forEach(function(acc) {
+    acc.username = acc.owner.toLowerCase().split(' ').map(name => name[0]).join('');
+  });
+}
+
+createUsernames(accounts)
+
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -206,7 +221,7 @@ createUsernames(accounts)
 console.log(accounts);
 */
 
-
+/*
 // THE FILTER METHOD
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 console.log(movements);
@@ -226,3 +241,24 @@ console.log(depositsWithFor);
 
 const withdrawals = movements.filter(mov => mov < 0);
 console.log(withdrawals);
+*/
+
+
+// THE REDUCE METHOD
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+console.log(movements);
+
+const balance = movements.reduce((acc, cur) => acc + cur, 0);
+
+console.log(balance);
+
+let balance2 = 0;
+for (const mov of movements) balance2 += mov;
+console.log(balance2);
+
+// Maximum value
+const max = movements.reduce((acc, cur) => (cur > acc) ? cur : acc, movements[0]);
+console.log(max);
+
+// If initial value for acc is not informed, defaults to using first element of array
+console.log([-15, -40, -30].reduce((acc, cur) => (cur > acc) ? cur : acc));
