@@ -171,6 +171,7 @@ currenciesUnique.forEach(function(value, _, map) {
 });
 */
 
+/*
 // THE MAP METHOD
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
@@ -191,5 +192,15 @@ const movementsDescriptions = movements.map((mov, i) => {
   return `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`;
 });
 console.log(movementsDescriptions);
+*/
 
+const createUsernames = function(accounts) {
+  accounts.forEach(function(acc) {
+    acc.username = acc.owner.toLowerCase().split(' ').map(name => name[0]).join('');
+  });
+}
+
+const user = 'Steven Thomas Williams';
+createUsernames(accounts)
+console.log(accounts);
 
