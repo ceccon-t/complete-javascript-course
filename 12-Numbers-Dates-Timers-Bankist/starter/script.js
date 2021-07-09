@@ -332,7 +332,7 @@ console.log((2.7).toFixed(3)); // returns a string
 console.log(+(2.345).toFixed(2)); // returns a string
 */
 
-
+/*
 // THE REMAINDER OPERATOR
 console.log(5 % 2);
 console.log(5 / 2); // 5 = 2 * 2 + 1
@@ -358,6 +358,45 @@ labelBalance.addEventListener('click', () => {
     if (i % 3 === 0) row.style.backgroundColor = 'blue';
   });
 });
+*/
+
+
+// WORKING WITH BIGINT
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(2 ** 53 + 1);
+console.log(2 ** 53 + 2);
+console.log(2 ** 53 + 3);
+console.log(2 ** 53 + 4);
+
+// BigInt (ES20)
+console.log(564685484648489484964964848465486486n);
+console.log(BigInt(564685484));
+
+// Operations
+console.log(10000n + 10000n);
+console.log(51658468545615615648648964153165489647n * 10000000n);
+
+const huge = 51615645645645661321n;
+const num = 23;
+
+// Cannot mix BigInt with normal numbers
+//console.log(huge * num); // throws error
+console.log(huge * BigInt(num)); 
+
+// Exceptions
+// logical operators
+console.log(20n > 15);
+console.log(20n === 20); // false
+console.log(20n == 20); // true
+console.log(typeof 20n);
+
+// string concatenation
+console.log(huge + ' is REALLY big!!');
+
+// Division with BigInt cuts off decimal part
+console.log(10n / 3n);
+console.log(10 / 3);
 
 
 
