@@ -69,3 +69,48 @@ document.querySelector('.btn--close-cookie').addEventListener('click', function(
   message.remove(); // <- newer way
   //message.parentElement.removeChild(message); // <- older way
 });
+
+// Styles
+message.style.backgroundColor = '#37383d';
+message.style.width = '120%';
+
+console.log(message.style.height); // only gets inline styles
+console.log(message.style.backgroundColor);
+
+console.log(getComputedStyle(message).height); // gets end styles
+
+message.style.height = Number.parseFloat( getComputedStyle(message).height , 10) + 30 + 'px';
+
+document.documentElement.style.setProperty('--color-primary', 'orangered');
+
+// Attributes
+const logo = document.querySelector('.nav__logo');
+console.log(logo.alt);
+console.log(logo.src);
+console.log(logo.className);
+
+logo.alt = 'Beautiful minimalist logo';
+
+// Non-standard
+console.log(logo.designer);
+console.log(logo.getAttribute('designer'));
+logo.setAttribute('company', 'Bankist');
+
+console.log(logo.src); // absolute
+console.log(logo.getAttribute('src')); // relative
+
+const link = document.querySelector('.nav__link--btn');
+console.log(link.href);
+console.log(link.getAttribute('href'));
+
+// Data attributes (always stored in 'dataset' property)
+console.log(logo.dataset.versionNumber);
+
+// Classes, always use classList
+logo.classList.add('c', 'j');
+logo.classList.remove('c', 'j');
+logo.classList.toggle('c');
+logo.classList.contains('c');
+
+// Don't use this, overwrites all other classes
+logo.className = 'jonas';
